@@ -7,7 +7,7 @@
 
   setTimeout(() => {
     state.myDate = '2022-10-09';
-  }, 3000);
+  }, 1000);
 </script>
 
 <template>

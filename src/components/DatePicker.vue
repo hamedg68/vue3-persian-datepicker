@@ -402,7 +402,7 @@
        * 		default value in "time" type is "HH:mm"
        */
       modelValue: {
-        type: String,
+        type: [String, Array<string>],
       },
       format: {
         type: String,
@@ -1266,6 +1266,7 @@
         }
       },
       showPicker(el: 'icon' | 'input', index: 0 | 1): void {
+        this.modelValue && this.setDate(this.modelValue);
         if (this.clickOn == 'all' || this.clickOn == el) {
           const inputName = this.inputs[index];
           if (this.dualInput) this.inputName = inputName;
