@@ -922,6 +922,7 @@
       },
       show: {
         handler: function (val) {
+          this.modelValue && this.setDate(this.modelValue);
           this.showDatePicker = val;
         },
       },

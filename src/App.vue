@@ -3,6 +3,7 @@
   import DatePicker from './components/DatePicker.vue';
   const state = reactive({
     myDate: '',
+    show: false,
   });
 
   setTimeout(() => {
@@ -12,7 +13,15 @@
 
 <template>
   <p>{{ state.myDate }}</p>
-  <DatePicker v-model="state.myDate" alt-name="rest" mode="single"></DatePicker>
+
+  <button @click="state.show = true">show</button>
+  <DatePicker
+    v-model="state.myDate"
+    :show="state.show"
+    @close="state.show = false"
+    alt-name="rest"
+    mode="single"
+  ></DatePicker>
 </template>
 
 <style>
