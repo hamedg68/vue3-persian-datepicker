@@ -1,7 +1,7 @@
 {
   "name": "@hamedg/vue3-persian-datepicker",
   "description": "A datepicker component for select date (vue 3)",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "files": [
     "dist/*",
     "src/*"
